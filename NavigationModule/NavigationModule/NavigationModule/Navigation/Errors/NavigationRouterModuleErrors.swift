@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum NavigationRouterModuleErrors: String, Error, ErrorInterface {
+enum NavigationRouterModuleErrors: String, Error {
     
     case missingCurrentModule
     
@@ -20,10 +20,6 @@ enum NavigationRouterModuleErrors: String, Error, ErrorInterface {
     }
     
     var localizedDescription: String {
-        return rawValue
-    }
-    
-    var errorDescription: String {
         return description
     }
 }

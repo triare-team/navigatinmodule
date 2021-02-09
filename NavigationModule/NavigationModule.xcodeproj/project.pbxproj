@@ -19,8 +19,6 @@
 		1194FE3F25D26F2F0099130D /* NavigationRouterModuleErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE2F25D26F2F0099130D /* NavigationRouterModuleErrors.swift */; };
 		1194FE4025D26F2F0099130D /* NavigationSetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE3225D26F2F0099130D /* NavigationSetController.swift */; };
 		1194FE4125D26F2F0099130D /* NavigationSetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE3425D26F2F0099130D /* NavigationSetModel.swift */; };
-		1194FE4825D26F4B0099130D /* ErrorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE4625D26F4B0099130D /* ErrorInterface.swift */; };
-		1194FE4925D26F4B0099130D /* ErrorDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE4725D26F4B0099130D /* ErrorDescriptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +47,6 @@
 		1194FE2F25D26F2F0099130D /* NavigationRouterModuleErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRouterModuleErrors.swift; sourceTree = "<group>"; };
 		1194FE3225D26F2F0099130D /* NavigationSetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationSetController.swift; sourceTree = "<group>"; };
 		1194FE3425D26F2F0099130D /* NavigationSetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationSetModel.swift; sourceTree = "<group>"; };
-		1194FE4625D26F4B0099130D /* ErrorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorInterface.swift; sourceTree = "<group>"; };
-		1194FE4725D26F4B0099130D /* ErrorDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescriptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +89,6 @@
 		1194FE0325D26EF00099130D /* NavigationModule */ = {
 			isa = PBXGroup;
 			children = (
-				1194FE4425D26F4B0099130D /* ErrorDescriptor */,
 				1194FE1D25D26F2F0099130D /* NavigationModule */,
 				1194FE0425D26EF00099130D /* NavigationModule.h */,
 				1194FE0525D26EF00099130D /* Info.plist */,
@@ -204,24 +199,6 @@
 				1194FE3425D26F2F0099130D /* NavigationSetModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		1194FE4425D26F4B0099130D /* ErrorDescriptor */ = {
-			isa = PBXGroup;
-			children = (
-				1194FE4525D26F4B0099130D /* Interface */,
-				1194FE4725D26F4B0099130D /* ErrorDescriptor.swift */,
-			);
-			name = ErrorDescriptor;
-			path = NavigationModule/ErrorDescriptor;
-			sourceTree = "<group>";
-		};
-		1194FE4525D26F4B0099130D /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-				1194FE4625D26F4B0099130D /* ErrorInterface.swift */,
-			);
-			path = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,9 +316,7 @@
 				1194FE4025D26F2F0099130D /* NavigationSetController.swift in Sources */,
 				1194FE4125D26F2F0099130D /* NavigationSetModel.swift in Sources */,
 				1194FE3B25D26F2F0099130D /* NavigationRouterDelegate.swift in Sources */,
-				1194FE4925D26F4B0099130D /* ErrorDescriptor.swift in Sources */,
 				1194FE3A25D26F2F0099130D /* NavigationModule.swift in Sources */,
-				1194FE4825D26F4B0099130D /* ErrorInterface.swift in Sources */,
 				1194FE3D25D26F2F0099130D /* NavigationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
