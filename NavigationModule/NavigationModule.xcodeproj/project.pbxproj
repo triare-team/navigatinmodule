@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1194FE0B25D26EF00099130D /* NavigationModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1194FE0125D26EF00099130D /* NavigationModule.framework */; };
+		1194FE1025D26EF00099130D /* NavigationModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE0F25D26EF00099130D /* NavigationModuleTests.swift */; };
+		1194FE1225D26EF00099130D /* NavigationModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1194FE0425D26EF00099130D /* NavigationModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1194FE3825D26F2F0099130D /* NavigationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE2225D26F2F0099130D /* NavigationModuleViewController.swift */; };
+		1194FE3A25D26F2F0099130D /* NavigationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE2625D26F2F0099130D /* NavigationModule.swift */; };
+		1194FE3B25D26F2F0099130D /* NavigationRouterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE2825D26F2F0099130D /* NavigationRouterDelegate.swift */; };
+		1194FE3C25D26F2F0099130D /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE2A25D26F2F0099130D /* NavigationRouter.swift */; };
+		1194FE3D25D26F2F0099130D /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE2C25D26F2F0099130D /* NavigationModel.swift */; };
+		1194FE3E25D26F2F0099130D /* NavigationFlows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE2D25D26F2F0099130D /* NavigationFlows.swift */; };
+		1194FE3F25D26F2F0099130D /* NavigationRouterModuleErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE2F25D26F2F0099130D /* NavigationRouterModuleErrors.swift */; };
+		1194FE4025D26F2F0099130D /* NavigationSetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE3225D26F2F0099130D /* NavigationSetController.swift */; };
+		1194FE4125D26F2F0099130D /* NavigationSetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE3425D26F2F0099130D /* NavigationSetModel.swift */; };
+		1194FE4825D26F4B0099130D /* ErrorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE4625D26F4B0099130D /* ErrorInterface.swift */; };
+		1194FE4925D26F4B0099130D /* ErrorDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE4725D26F4B0099130D /* ErrorDescriptor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1194FE0C25D26EF00099130D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1194FDF825D26EF00099130D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1194FE0025D26EF00099130D;
+			remoteInfo = NavigationModule;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1194FE0125D26EF00099130D /* NavigationModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NavigationModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1194FE0425D26EF00099130D /* NavigationModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationModule.h; sourceTree = "<group>"; };
+		1194FE0525D26EF00099130D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1194FE0A25D26EF00099130D /* NavigationModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1194FE0F25D26EF00099130D /* NavigationModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModuleTests.swift; sourceTree = "<group>"; };
+		1194FE1125D26EF00099130D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1194FE2225D26F2F0099130D /* NavigationModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationModuleViewController.swift; sourceTree = "<group>"; };
+		1194FE2625D26F2F0099130D /* NavigationModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationModule.swift; sourceTree = "<group>"; };
+		1194FE2825D26F2F0099130D /* NavigationRouterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRouterDelegate.swift; sourceTree = "<group>"; };
+		1194FE2A25D26F2F0099130D /* NavigationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		1194FE2C25D26F2F0099130D /* NavigationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
+		1194FE2D25D26F2F0099130D /* NavigationFlows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationFlows.swift; sourceTree = "<group>"; };
+		1194FE2F25D26F2F0099130D /* NavigationRouterModuleErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRouterModuleErrors.swift; sourceTree = "<group>"; };
+		1194FE3225D26F2F0099130D /* NavigationSetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationSetController.swift; sourceTree = "<group>"; };
+		1194FE3425D26F2F0099130D /* NavigationSetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationSetModel.swift; sourceTree = "<group>"; };
+		1194FE4625D26F4B0099130D /* ErrorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorInterface.swift; sourceTree = "<group>"; };
+		1194FE4725D26F4B0099130D /* ErrorDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescriptor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1194FDFE25D26EF00099130D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1194FE0725D26EF00099130D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1194FE0B25D26EF00099130D /* NavigationModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1194FDF725D26EF00099130D = {
+			isa = PBXGroup;
+			children = (
+				1194FE0325D26EF00099130D /* NavigationModule */,
+				1194FE0E25D26EF00099130D /* NavigationModuleTests */,
+				1194FE0225D26EF00099130D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1194FE0225D26EF00099130D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE0125D26EF00099130D /* NavigationModule.framework */,
+				1194FE0A25D26EF00099130D /* NavigationModuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1194FE0325D26EF00099130D /* NavigationModule */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE4425D26F4B0099130D /* ErrorDescriptor */,
+				1194FE1D25D26F2F0099130D /* NavigationModule */,
+				1194FE0425D26EF00099130D /* NavigationModule.h */,
+				1194FE0525D26EF00099130D /* Info.plist */,
+			);
+			path = NavigationModule;
+			sourceTree = "<group>";
+		};
+		1194FE0E25D26EF00099130D /* NavigationModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE0F25D26EF00099130D /* NavigationModuleTests.swift */,
+				1194FE1125D26EF00099130D /* Info.plist */,
+			);
+			path = NavigationModuleTests;
+			sourceTree = "<group>";
+		};
+		1194FE1D25D26F2F0099130D /* NavigationModule */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE1E25D26F2F0099130D /* NavigationModuleViewController */,
+				1194FE2425D26F2F0099130D /* Navigation */,
+			);
+			path = NavigationModule;
+			sourceTree = "<group>";
+		};
+		1194FE1E25D26F2F0099130D /* NavigationModuleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE2225D26F2F0099130D /* NavigationModuleViewController.swift */,
+			);
+			path = NavigationModuleViewController;
+			sourceTree = "<group>";
+		};
+		1194FE2425D26F2F0099130D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE2525D26F2F0099130D /* NavigationModule */,
+				1194FE2725D26F2F0099130D /* Delegate */,
+				1194FE2925D26F2F0099130D /* NavigationRouter */,
+				1194FE2B25D26F2F0099130D /* Model */,
+				1194FE2E25D26F2F0099130D /* Errors */,
+				1194FE3025D26F2F0099130D /* NavigationSetModule */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		1194FE2525D26F2F0099130D /* NavigationModule */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE2625D26F2F0099130D /* NavigationModule.swift */,
+			);
+			path = NavigationModule;
+			sourceTree = "<group>";
+		};
+		1194FE2725D26F2F0099130D /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE2825D26F2F0099130D /* NavigationRouterDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		1194FE2925D26F2F0099130D /* NavigationRouter */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE2A25D26F2F0099130D /* NavigationRouter.swift */,
+			);
+			path = NavigationRouter;
+			sourceTree = "<group>";
+		};
+		1194FE2B25D26F2F0099130D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE2C25D26F2F0099130D /* NavigationModel.swift */,
+				1194FE2D25D26F2F0099130D /* NavigationFlows.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1194FE2E25D26F2F0099130D /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE2F25D26F2F0099130D /* NavigationRouterModuleErrors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		1194FE3025D26F2F0099130D /* NavigationSetModule */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE3125D26F2F0099130D /* Controller */,
+				1194FE3325D26F2F0099130D /* Model */,
+			);
+			path = NavigationSetModule;
+			sourceTree = "<group>";
+		};
+		1194FE3125D26F2F0099130D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE3225D26F2F0099130D /* NavigationSetController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1194FE3325D26F2F0099130D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE3425D26F2F0099130D /* NavigationSetModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1194FE4425D26F4B0099130D /* ErrorDescriptor */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE4525D26F4B0099130D /* Interface */,
+				1194FE4725D26F4B0099130D /* ErrorDescriptor.swift */,
+			);
+			name = ErrorDescriptor;
+			path = NavigationModule/ErrorDescriptor;
+			sourceTree = "<group>";
+		};
+		1194FE4525D26F4B0099130D /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				1194FE4625D26F4B0099130D /* ErrorInterface.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1194FDFC25D26EF00099130D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1194FE1225D26EF00099130D /* NavigationModule.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1194FE0025D26EF00099130D /* NavigationModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1194FE1525D26EF00099130D /* Build configuration list for PBXNativeTarget "NavigationModule" */;
+			buildPhases = (
+				1194FDFC25D26EF00099130D /* Headers */,
+				1194FDFD25D26EF00099130D /* Sources */,
+				1194FDFE25D26EF00099130D /* Frameworks */,
+				1194FDFF25D26EF00099130D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NavigationModule;
+			productName = NavigationModule;
+			productReference = 1194FE0125D26EF00099130D /* NavigationModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1194FE0925D26EF00099130D /* NavigationModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1194FE1825D26EF00099130D /* Build configuration list for PBXNativeTarget "NavigationModuleTests" */;
+			buildPhases = (
+				1194FE0625D26EF00099130D /* Sources */,
+				1194FE0725D26EF00099130D /* Frameworks */,
+				1194FE0825D26EF00099130D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1194FE0D25D26EF00099130D /* PBXTargetDependency */,
+			);
+			name = NavigationModuleTests;
+			productName = NavigationModuleTests;
+			productReference = 1194FE0A25D26EF00099130D /* NavigationModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1194FDF825D26EF00099130D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					1194FE0025D26EF00099130D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					1194FE0925D26EF00099130D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 1194FDFB25D26EF00099130D /* Build configuration list for PBXProject "NavigationModule" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1194FDF725D26EF00099130D;
+			productRefGroup = 1194FE0225D26EF00099130D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1194FE0025D26EF00099130D /* NavigationModule */,
+				1194FE0925D26EF00099130D /* NavigationModuleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1194FDFF25D26EF00099130D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1194FE0825D26EF00099130D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1194FDFD25D26EF00099130D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1194FE3F25D26F2F0099130D /* NavigationRouterModuleErrors.swift in Sources */,
+				1194FE3C25D26F2F0099130D /* NavigationRouter.swift in Sources */,
+				1194FE3E25D26F2F0099130D /* NavigationFlows.swift in Sources */,
+				1194FE3825D26F2F0099130D /* NavigationModuleViewController.swift in Sources */,
+				1194FE4025D26F2F0099130D /* NavigationSetController.swift in Sources */,
+				1194FE4125D26F2F0099130D /* NavigationSetModel.swift in Sources */,
+				1194FE3B25D26F2F0099130D /* NavigationRouterDelegate.swift in Sources */,
+				1194FE4925D26F4B0099130D /* ErrorDescriptor.swift in Sources */,
+				1194FE3A25D26F2F0099130D /* NavigationModule.swift in Sources */,
+				1194FE4825D26F4B0099130D /* ErrorInterface.swift in Sources */,
+				1194FE3D25D26F2F0099130D /* NavigationModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1194FE0625D26EF00099130D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1194FE1025D26EF00099130D /* NavigationModuleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1194FE0D25D26EF00099130D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1194FE0025D26EF00099130D /* NavigationModule */;
+			targetProxy = 1194FE0C25D26EF00099130D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1194FE1325D26EF00099130D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1194FE1425D26EF00099130D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1194FE1625D26EF00099130D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NavigationModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.base.app.NavigationModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1194FE1725D26EF00099130D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NavigationModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.base.app.NavigationModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1194FE1925D26EF00099130D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NavigationModuleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.base.app.NavigationModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1194FE1A25D26EF00099130D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NavigationModuleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.base.app.NavigationModuleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1194FDFB25D26EF00099130D /* Build configuration list for PBXProject "NavigationModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1194FE1325D26EF00099130D /* Debug */,
+				1194FE1425D26EF00099130D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1194FE1525D26EF00099130D /* Build configuration list for PBXNativeTarget "NavigationModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1194FE1625D26EF00099130D /* Debug */,
+				1194FE1725D26EF00099130D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1194FE1825D26EF00099130D /* Build configuration list for PBXNativeTarget "NavigationModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1194FE1925D26EF00099130D /* Debug */,
+				1194FE1A25D26EF00099130D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1194FDF825D26EF00099130D /* Project object */;
+}
