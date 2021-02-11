@@ -218,7 +218,7 @@ In this case, all object processing encapsulated in the upcoming controller.
 
 # What do we recommend?
 
-Storing the instances of NavigationModel in different places (SceneDelegate, Custom view controller which responsible for the end flow, etc) not a good solution for support and test the navigation flows. We recommend creating an incapsulated object responsible for the set of NavigationModel objects. Example:
+Storing the instances of NavigationModel in different places (SceneDelegate, Custom view controller which responsible for the end flow, etc) not a good solution for support and test the navigation flows. We recommend creating an encapsulated object responsible for the set of NavigationModel objects. Example:. Example:
 
 ```
 class NavigatinoModels {
