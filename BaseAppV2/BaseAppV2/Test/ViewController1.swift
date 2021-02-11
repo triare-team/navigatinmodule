@@ -9,6 +9,19 @@ import UIKit
 import NavigationModule
 
 class ViewController1: NavigationModuleViewController {
+    
+    var counter: Int?
+    
+    required init(navigationModule: NavigationModule? = nil, object: Any? = nil) {
+        super.init(navigationModule: navigationModule, object: object)
+        if let counter = (object as? Int) {
+            self.counter = counter
+        }
+    }
+    
+    required init(coder: NSCoder) {
+        fatalError("init(coder:) is not supported")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +31,10 @@ class ViewController1: NavigationModuleViewController {
 
 
     @IBAction func next(_ sender: Any) {
-        let m = NavigationSetModel.init(title: "test1", imageName: "title", initialViewControllerType: ViewController2.self)
-        self.navigationModule?.endFlow(with: [m, m ,m])
+        let navigationSetModel1 = NavigationSetModel.init(title: "Title1", imageName: "image_name", initialViewControllerType: ViewController2.self)
+        let navigationSetModel2 = NavigationSetModel.init(title: "Title2", imageName: "image_name", initialViewControllerType: ViewController2.self)
+        let navigationSetModel3 = NavigationSetModel.init(title: "Title3", imageName: "image_name", initialViewControllerType: ViewController2.self)
+        self.navigationModule?.endFlow(with: [navigationSetModel1, navigationSetModel2 ,navigationSetModel3])
     }
 
 }

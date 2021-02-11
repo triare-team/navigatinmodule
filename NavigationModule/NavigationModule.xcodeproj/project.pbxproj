@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1140709725D5C740007CF832 /* NavigationModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1140709625D5C740007CF832 /* NavigationModuleBuilder.swift */; };
+		1140709B25D5C759007CF832 /* TabBarNavigationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1140709A25D5C759007CF832 /* TabBarNavigationModule.swift */; };
 		1194FE0B25D26EF00099130D /* NavigationModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1194FE0125D26EF00099130D /* NavigationModule.framework */; };
 		1194FE1025D26EF00099130D /* NavigationModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194FE0F25D26EF00099130D /* NavigationModuleTests.swift */; };
 		1194FE1225D26EF00099130D /* NavigationModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1194FE0425D26EF00099130D /* NavigationModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1140709625D5C740007CF832 /* NavigationModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModuleBuilder.swift; sourceTree = "<group>"; };
+		1140709A25D5C759007CF832 /* TabBarNavigationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNavigationModule.swift; sourceTree = "<group>"; };
 		1194FE0125D26EF00099130D /* NavigationModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NavigationModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1194FE0425D26EF00099130D /* NavigationModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationModule.h; sourceTree = "<group>"; };
 		1194FE0525D26EF00099130D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				1194FE2625D26F2F0099130D /* NavigationModule.swift */,
+				1140709A25D5C759007CF832 /* TabBarNavigationModule.swift */,
+				1140709625D5C740007CF832 /* NavigationModuleBuilder.swift */,
 			);
 			path = NavigationModule;
 			sourceTree = "<group>";
@@ -310,8 +316,10 @@
 				1194FE3C25D26F2F0099130D /* NavigationRouter.swift in Sources */,
 				1194FE3825D26F2F0099130D /* NavigationModuleViewController.swift in Sources */,
 				1194FE4025D26F2F0099130D /* NavigationSetController.swift in Sources */,
+				1140709725D5C740007CF832 /* NavigationModuleBuilder.swift in Sources */,
 				1194FE4125D26F2F0099130D /* NavigationSetModel.swift in Sources */,
 				1194FE3B25D26F2F0099130D /* NavigationRouterDelegate.swift in Sources */,
+				1140709B25D5C759007CF832 /* TabBarNavigationModule.swift in Sources */,
 				1194FE3A25D26F2F0099130D /* NavigationModule.swift in Sources */,
 				1194FE3D25D26F2F0099130D /* NavigationModel.swift in Sources */,
 			);

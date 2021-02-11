@@ -19,14 +19,6 @@ public class NavigationRouter {
         self.window = window
     }
     
-    func getCurrentModule() throws -> NavigationModule {
-        if let currentModule = self.currentModule {
-            return currentModule
-        } else {
-            throw NavigationRouterModuleErrors.missingCurrentModule
-        }
-    }
-    
     public func startNavigationModuleFrom(_ navigationModel: NavigationModel) {
         let navigationModuleAbstract = NavigationModule.init(navigationRouterModuleDelegate: self, navigationModels: [navigationModel])
         window.rootViewController = navigationModuleAbstract.startFlow()
@@ -38,9 +30,7 @@ public class NavigationRouter {
         let navigationModuleAbstract = NavigationModuleBuilder.build(navigationModels: navigationModels, navigationRouterDelegate: self)
         
         currentModule = navigationModuleAbstract
-        UIView.transition(with: self.window!, duration: 0.5, options: .transitionFlipFromRight, animations: {
-            self.window.rootViewController = navigationModuleAbstract.startFlow()
-        }, completion: nil)
+        self.window.rootViewController = navigationModuleAbstract.startFlow()
     }
     
 }
@@ -49,10 +39,6 @@ extension NavigationRouter: NavigationRouterDelegate {
     
     func startNextNavigationModule(with navigationModel: [NavigationModel]) {
         changeNavigationModule(with: navigationModel)
-    }
-    
-    func switchNavigationModule(to navigationModule: NavigationModule) {
-        currentModule = navigationModule
     }
 }
 

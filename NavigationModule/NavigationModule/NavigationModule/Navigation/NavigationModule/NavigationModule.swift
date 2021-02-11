@@ -9,32 +9,6 @@
 import Foundation
 import UIKit
 
-class NavigationModuleBuilder {
-    static func build(navigationModels: [NavigationModel], navigationRouterDelegate: NavigationRouterDelegate) -> NavigationModule {
-        
-        if navigationModels.count > 1 {
-            return TabBarNavigationModule.init(navigationRouterModuleDelegate: navigationRouterDelegate, navigationModels: navigationModels)
-        } else {
-            return NavigationModule.init(navigationRouterModuleDelegate: navigationRouterDelegate, navigationModels: navigationModels)
-        }
-    }
-}
-
-class TabBarNavigationModule: NavigationModule {
-    override func builder(for navigationModels: [NavigationModel]) -> UINavigationController {
-        let tabBarController = NavigationSetController.init()
-        
-        navigationModels.forEach { (navigationModel) in
-            tabBarController.navigationModules.append(NavigationModuleBuilder.build(navigationModels: [navigationModel], navigationRouterDelegate: self.navigationRouterModuleDelegate))
-        }
-        
-        tabBarController.generateViewControllers()
-        
-        navigationController.setViewControllers([tabBarController], animated: false)
-        return navigationController
-    }
-}
-
 public class NavigationModule {
     
     private(set) var navigationRouterModuleDelegate: NavigationRouterDelegate!
@@ -74,3 +48,4 @@ public class NavigationModule {
         navigationController.popViewController(animated: true)
     }
 }
+

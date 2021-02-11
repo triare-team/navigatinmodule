@@ -11,5 +11,4 @@ import Foundation
 protocol NavigationRouterDelegate {
     
     func startNextNavigationModule(with navigationModel: [NavigationModel])
-    func switchNavigationModule(to navigationModule: NavigationModule)
 }
