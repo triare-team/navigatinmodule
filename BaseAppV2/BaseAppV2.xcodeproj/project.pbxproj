@@ -15,6 +15,7 @@
 		11022FC725D142E10077AD8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11022FC525D142E10077AD8A /* LaunchScreen.storyboard */; };
 		11022FD225D142E20077AD8A /* BaseAppV2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022FD125D142E20077AD8A /* BaseAppV2Tests.swift */; };
 		11022FDD25D142E20077AD8A /* BaseAppV2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022FDC25D142E20077AD8A /* BaseAppV2UITests.swift */; };
+		114070A425D5EC8A007CF832 /* NavigationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114070A325D5EC8A007CF832 /* NavigationModels.swift */; };
 		115CF33725D273C400B6B5C3 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115CF33525D273C400B6B5C3 /* ViewController1.swift */; };
 		115CF33825D273C400B6B5C3 /* ViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 115CF33625D273C400B6B5C3 /* ViewController1.xib */; };
 		115CF34025D278A400B6B5C3 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115CF33E25D278A400B6B5C3 /* ViewController2.swift */; };
@@ -68,6 +69,7 @@
 		11022FD825D142E20077AD8A /* BaseAppV2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseAppV2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11022FDC25D142E20077AD8A /* BaseAppV2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppV2UITests.swift; sourceTree = "<group>"; };
 		11022FDE25D142E20077AD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114070A325D5EC8A007CF832 /* NavigationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModels.swift; sourceTree = "<group>"; };
 		115CF33525D273C400B6B5C3 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		115CF33625D273C400B6B5C3 /* ViewController1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController1.xib; sourceTree = "<group>"; };
 		115CF33E25D278A400B6B5C3 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				115CF33625D273C400B6B5C3 /* ViewController1.xib */,
 				115CF33E25D278A400B6B5C3 /* ViewController2.swift */,
 				115CF33F25D278A400B6B5C3 /* ViewController2.xib */,
+				114070A325D5EC8A007CF832 /* NavigationModels.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				115CF33725D273C400B6B5C3 /* ViewController1.swift in Sources */,
 				11022FBF25D142DF0077AD8A /* ViewController.swift in Sources */,
 				11022FBB25D142DF0077AD8A /* AppDelegate.swift in Sources */,
+				114070A425D5EC8A007CF832 /* NavigationModels.swift in Sources */,
 				11022FBD25D142DF0077AD8A /* SceneDelegate.swift in Sources */,
 				115CF34025D278A400B6B5C3 /* ViewController2.swift in Sources */,
 			);

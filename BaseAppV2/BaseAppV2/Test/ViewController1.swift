@@ -31,10 +31,8 @@ class ViewController1: NavigationModuleViewController {
 
 
     @IBAction func next(_ sender: Any) {
-        let navigationSetModel1 = NavigationSetModel.init(title: "Title1", imageName: "image_name", initialViewControllerType: ViewController2.self)
-        let navigationSetModel2 = NavigationSetModel.init(title: "Title2", imageName: "image_name", initialViewControllerType: ViewController2.self)
-        let navigationSetModel3 = NavigationSetModel.init(title: "Title3", imageName: "image_name", initialViewControllerType: ViewController2.self)
-        self.navigationModule?.endFlow(with: [navigationSetModel1, navigationSetModel2 ,navigationSetModel3])
+        
+        self.navigationModule?.endFlow(with: [NavigatinoModels.navigationSetModel1, NavigatinoModels,navigationSetModel2, NavigatinoModels.navigationSetModel3])
     }
 
 }
