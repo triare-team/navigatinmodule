@@ -13,12 +13,10 @@ public class NavigationRouter {
     
     private var window: UIWindow!
     
-    private var navigationController: UINavigationController = UINavigationController()
     private var currentModule: NavigationModule?
     
     public init(in window: UIWindow) {
         self.window = window
-        self.navigationController.setNavigationBarHidden(true, animated: false)
     }
     
     func getCurrentModule() throws -> NavigationModule {
@@ -27,10 +25,6 @@ public class NavigationRouter {
         } else {
             throw NavigationRouterModuleErrors.missingCurrentModule
         }
-    }
-    
-    func getNavigationController() -> UINavigationController {
-        return navigationController
     }
     
     public func startNavigationModuleFrom(_ navigationModel: NavigationModel) {
