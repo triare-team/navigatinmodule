@@ -228,9 +228,9 @@ class NavigatinoModels {
     static let navigationSetModel3 = NavigationSetModel.init(title: "Title3", imageName: "image_name", initialViewControllerType: ViewController2.self)
     
     // navigation controller models
-    let navigationModel1 = NavigationModel.init(initialViewControllerType: ViewController1.self)
-    let navigationModel2 = NavigationModel.init(initialViewControllerType: ViewController1.self)
-    let navigationModel3 = NavigationModel.init(initialViewControllerType: ViewController1.self)
+    static let navigationModel1 = NavigationModel.init(initialViewControllerType: ViewController1.self)
+    static let navigationModel2 = NavigationModel.init(initialViewControllerType: ViewController1.self)
+    static let navigationModel3 = NavigationModel.init(initialViewControllerType: ViewController1.self)
 }
 ```
 
