@@ -192,7 +192,7 @@ self.navigationModule?.endFlow(with: [navigationSetModel1, navigationSetModel2 ,
 
 For passing, data to the next NavigationModuleViewController use  pushViewController(_: object:) with passing object:
 ```
-self.navigationModule?.pushViewController(ViewController1.self, object: nil) // where self -> UIViewController2 inherited of NavigationModuleViewController
+self.navigationModule?.pushViewController(ViewController1.self, object: 200) // where self -> UIViewController2 inherited of NavigationModuleViewController
 ```
 ViewController1 must be inherited of NavigationModuleViewController and look like:
 
