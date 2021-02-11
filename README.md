@@ -41,7 +41,6 @@ Methods:
 - changeNavigationModule(with navigationModels: [NavigationModel]) - method for changing the current navigation module.
 ```
 
-
 **NavigationModel**
 
 Parameters:
@@ -60,6 +59,40 @@ Methods:
 - startNextNavigationModule(with navigationModel: [NavigationModel]) - delegate method for sending next navigation flow from NavigationModule level to NavigationRouter object.
 ```
 
+**NavigationModule**
 
+Prameters:
+```
+- navigationRouterModuleDelegate: NavigationRouterDelegate! - used for sending the next navigation flow to NavigationRouter object.
+- navigationController: UINavigationController - used for transfer navigation logic to the navigation module level.
+- navigationModels: [NavigationModel]? - used for saving usable navigation models.
+```
 
+Methods:
+
+```
+- init(navigationRouterModuleDelegate: NavigationRouterDelegate, navigationModels: [NavigationModel]?) - initiate an instance of NavigationModule with NavigationRouterDelegate object delegate and an array of NavigationModel.
+- startFlow() -> UINavigationController? - the logic for initiate process of flow.
+- builder(for navigationModels: [NavigationModel]) -> UINavigationController - building UINavigationController for the flow.
+- endFlow(with nextNavigationModel: [NavigationModel]) - method for end current flow and start the next based on [NavigationModel].
+- pushViewController<T : NavigationModuleViewController>(_ viewController: T.Type, object: Any?) - push new NavigationModuleViewController to the current navigation stack.
+- popViewController() - remove NavigationModuleViewController from the current navigation stack.
+```
+
+**TabBarNavigationModule**
+
+Inherited of NavigationModule
+
+Methods:
+```
+- override builder(for navigationModels: [NavigationModel]) -> UINavigationController - creating UINavigationController with UITabBarConsoller as sub-controller.
+```
+
+**NavigationModuleBuilder**
+
+Methods:
+
+```
+build(navigationModels: [NavigationModel], navigationRouterDelegate: NavigationRouterDelegate) - method for creating navigation flow, based on a number of the upcoming list of [Navigation Model]. Making decisions create UINavigationController flow or TabBarController Flow.
+```
 
