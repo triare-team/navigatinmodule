@@ -93,6 +93,40 @@ Methods:
 Methods:
 
 ```
-build(navigationModels: [NavigationModel], navigationRouterDelegate: NavigationRouterDelegate) - method for creating navigation flow, based on a number of the upcoming list of [Navigation Model]. Making decisions create UINavigationController flow or TabBarController Flow.
+- build(navigationModels: [NavigationModel], navigationRouterDelegate: NavigationRouterDelegate) - method for creating navigation flow, based on a number of the upcoming list of [Navigation Model]. Making decisions create UINavigationController flow or TabBarController Flow.
 ```
 
+**NavigationRouterModuleErrors**
+
+Enumerator with Error inheritance.
+
+**NavigationSetModel**
+
+Inherited of NavigationModel
+
+Parameters:
+
+```
+- title: String? - value for setting up tab bar item title.
+- imageName: String? - value for setting up tab bar item image.
+```
+
+Methods: 
+```
+- init(title: String?, imageName: String?, initialViewControllerType: NavigationModuleViewController.Type) - creating an instance of NavigationSetModel with values for creating tab bar item and NavigationModuleViewController type.
+- override buildComponent(in navigationModule: NavigationModule) -> UINavigationController - method for creating UITabBar navigation flow.
+```
+
+**NavigationSetController**
+
+Inherited of UITabBarController
+
+Parameters:
+```
+- navigationModules: [NavigationModule] - an array of used NavigationModules.
+```
+
+Methods:
+```
+- generateViewControllers() - generating UINavigationController`s inside each tab bar flows.
+```
