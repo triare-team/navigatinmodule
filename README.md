@@ -178,7 +178,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 For pushing new NavigationModuleViewController object from NavigationModule level call method pushViewController(_: object:) :
 ```
-self.navigationModule?.pushViewController(ViewController1.self, object: nil) // wheare self -> NavigationModuleViewController
+self.navigationModule?.pushViewController(ViewController1.self, object: nil) // where self -> NavigationModuleViewController
 ```
 
 If you want to start a new flow with UITabBar use method endFlow(with:) of NavigationModule with an array of NavigationSetModel:
@@ -187,8 +187,31 @@ If you want to start a new flow with UITabBar use method endFlow(with:) of Navig
 let navigationSetModel1 = NavigationSetModel.init(title: "Title1", imageName: "image_name", initialViewControllerType: ViewController2.self)
 let navigationSetModel2 = NavigationSetModel.init(title: "Title2", imageName: "image_name", initialViewControllerType: ViewController2.self)
 let navigationSetModel3 = NavigationSetModel.init(title: "Title3", imageName: "image_name", initialViewControllerType: ViewController2.self)
-self.navigationModule?.endFlow(with: [navigationSetModel1, navigationSetModel2 ,navigationSetModel3]) // wheare self -> NavigationModuleViewController
+self.navigationModule?.endFlow(with: [navigationSetModel1, navigationSetModel2 ,navigationSetModel3]) // where self -> NavigationModuleViewController
 ```
 
+For passing, data to the next NavigationModuleViewController use  pushViewController(_: object:) with passing object:
+```
+self.navigationModule?.pushViewController(ViewController1.self, object: nil) // where self -> UIViewController2 inherited of NavigationModuleViewController
+```
+ViewController1 must be inherited of NavigationModuleViewController and look like:
 
+```
+class ViewController1: NavigationModuleViewController {
+    
+    var counter: Int?
+    
+    required init(navigationModule: NavigationModule? = nil, object: Any? = nil) {
+        super.init(navigationModule: navigationModule, object: object)
+        if let counter = (object as? Int) {
+            self.counter = counter
+        }
+    }
+    
+    required init(coder: NSCoder) {
+        fatalError("init(coder:) is not supported")
+    }
+}
+```
 
+In this case, all object processing encapsulated in the upcoming controller.
