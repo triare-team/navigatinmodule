@@ -215,3 +215,27 @@ class ViewController1: NavigationModuleViewController {
 ```
 
 In this case, all object processing encapsulated in the upcoming controller.
+
+# What do we recommend?
+
+Storing the instances of NavigationModel in different places (SceneDelegate, Custom view controller which responsible for the end flow, etc) not a good solution for support and test the navigation flows. We recommend creating an incapsulated object responsible for the set of NavigationModel objects. Example:
+
+```
+class NavigatinoModels {
+    // tab bar controller models
+    static let navigationSetModel1 = NavigationSetModel.init(title: "Title1", imageName: "image_name", initialViewControllerType: ViewController2.self)
+    static let navigationSetModel2 = NavigationSetModel.init(title: "Title2", imageName: "image_name", initialViewControllerType: ViewController2.self)
+    static let navigationSetModel3 = NavigationSetModel.init(title: "Title3", imageName: "image_name", initialViewControllerType: ViewController2.self)
+    
+    // navigation controller models
+    let navigationModel1 = NavigationModel.init(initialViewControllerType: ViewController1.self)
+    let navigationModel2 = NavigationModel.init(initialViewControllerType: ViewController1.self)
+    let navigationModel3 = NavigationModel.init(initialViewControllerType: ViewController1.self)
+}
+```
+
+and use them: 
+
+```
+self.navigationModule?.endFlow(with: [NavigatinoModels.navigationSetModel1, NavigatinoModels,navigationSetModel2, NavigatinoModels.navigationSetModel3])
+```
