@@ -130,3 +130,65 @@ Methods:
 ```
 - generateViewControllers() - generating UINavigationController`s inside each tab bar flows.
 ```
+# How To Use?
+
+For the start we need to initiate NavigationRouter with the main window, for this please add the following code to willConnectTo in SceneDelegate.swift:
+
+```
+guard let mainWindow = window else { return }
+let navigationRouter = NavigationRouter.init(in: mainWindow)
+```
+
+NavigationRouter and other parts of NavigationModule works with NavigationModel. Create an instance of NavigationModel for start NavigationModule logic:
+
+```
+let navigationModel = NavigationModel.init(initialViewControllerType: ViewController1.self)
+```
+
+ViewController1 should inherit of NavigationModuleViewController:
+
+```
+class ViewController1: NavigationModuleViewController {}
+```
+
+Last step for initialize NavigationModule logic, call method startNavigationModuleFrom() of NavigationRouter object:
+
+```
+navigationRouter.startNavigationModuleFrom(navigationModel)
+```
+
+In case all the steps do in the right way, method willConnectTo of SceneDelegate.swift must look like: 
+
+```
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+    var window: UIWindow?
+
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        guard let mainWindow = window else { return }
+    
+        let navigationRouter = NavigationRouter.init(in: mainWindow)
+        let navigationModel = NavigationModel.init(initialViewControllerType: ViewController1.self)
+        navigationRouter.startNavigationModuleFrom(navigationModel)
+    }
+}
+```
+
+For pushing new NavigationModuleViewController object from NavigationModule level call method pushViewController(_: object:) :
+```
+self.navigationModule?.pushViewController(ViewController1.self, object: nil) // wheare self -> NavigationModuleViewController
+```
+
+If you want to start a new flow with UITabBar use method endFlow(with:) of NavigationModule with an array of NavigationSetModel:
+
+```
+let navigationSetModel1 = NavigationSetModel.init(title: "Title1", imageName: "image_name", initialViewControllerType: ViewController2.self)
+let navigationSetModel2 = NavigationSetModel.init(title: "Title2", imageName: "image_name", initialViewControllerType: ViewController2.self)
+let navigationSetModel3 = NavigationSetModel.init(title: "Title3", imageName: "image_name", initialViewControllerType: ViewController2.self)
+self.navigationModule?.endFlow(with: [navigationSetModel1, navigationSetModel2 ,navigationSetModel3]) // wheare self -> NavigationModuleViewController
+```
+
+
+
