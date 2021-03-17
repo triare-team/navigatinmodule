@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol NavigationRouterDelegate {
+public protocol NavigationRouterDelegate {
     
     func startNextNavigationModule(with navigationModel: [NavigationModel])
 }

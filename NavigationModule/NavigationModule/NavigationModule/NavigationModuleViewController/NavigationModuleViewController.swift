@@ -8,17 +8,32 @@
 
 import UIKit
 
-open class NavigationModuleViewController: UIViewController {
+public typealias NavigationModuleViewControllerType = UIViewController & NavigationModuleViewControllerProtocol
+
+public protocol NavigationModuleViewControllerProtocol where Self: UIViewController {
+    var navigationModule: NavigationModule? { get set }
+    var object: Any? { get set }
+    init(navigationModule: NavigationModule?, object: Any?)
+}
+
+public extension NavigationModuleViewControllerProtocol {
+    init(navigationModule: NavigationModule? = nil, object: Any? = nil) {
+        self.init(navigationModule: nil, object: nil)
+    }
+}
+
+open class NavigationModuleViewController: NavigationModuleViewControllerType {
     
-    var object: Any?
-    public var navigationModule: NavigationModule?
+    public var object: Any?
+    public unowned var navigationModule: NavigationModule?
     
     deinit {
-        print("NavigationModuleViewController deinited")
+        print("\(type(of: self)) deinited")
     }
     
     required public init(navigationModule: NavigationModule? = nil, object: Any? = nil) {
         self.navigationModule = navigationModule
+        self.object = object
         super.init(nibName: String(describing: type(of: self)), bundle: nil)
     }
     

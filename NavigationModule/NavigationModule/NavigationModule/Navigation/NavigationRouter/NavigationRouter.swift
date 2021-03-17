@@ -32,12 +32,11 @@ public class NavigationRouter {
         currentModule = navigationModuleAbstract
         self.window.rootViewController = navigationModuleAbstract.startFlow()
     }
-    
 }
 
 extension NavigationRouter: NavigationRouterDelegate {
     
-    func startNextNavigationModule(with navigationModel: [NavigationModel]) {
+    public func startNextNavigationModule(with navigationModel: [NavigationModel]) {
         changeNavigationModule(with: navigationModel)
     }
 }

@@ -23,7 +23,6 @@ class NavigationSetController: UITabBarController {
                 generatedViewControllers.append(viewController)
             }
         })
-        
         viewControllers = generatedViewControllers
     }
 
