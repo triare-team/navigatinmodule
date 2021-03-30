@@ -9,6 +9,16 @@
 - All changes please push to your branch.
 - If you have cool features or changes, just create a pull request for review.
 
+**Or you can use** ```Swift Package Manager```
+
+- File
+- Swift Packages
+- Add Package Dependency...
+- Enter repository URL: ```http://gitlab.triare.net/Kruglyak/navigationmodule.git```
+- Rules - Version Up to Next Major 1.0.2
+- Press Next button
+- Finish
+
 **Cheers🍻**
 
 # Structure
@@ -162,17 +172,17 @@ In case all the steps do in the right way, method willConnectTo of SceneDelegate
 ```
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    var window: UIWindow?
+var window: UIWindow?
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let _ = (scene as? UIWindowScene) else { return }
-        
-        guard let mainWindow = window else { return }
-    
-        let navigationRouter = NavigationRouter.init(in: mainWindow)
-        let navigationModel = NavigationModel.init(initialViewControllerType: ViewController1.self)
-        navigationRouter.startNavigationModuleFrom(navigationModel)
-    }
+func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+guard let _ = (scene as? UIWindowScene) else { return }
+
+guard let mainWindow = window else { return }
+
+let navigationRouter = NavigationRouter.init(in: mainWindow)
+let navigationModel = NavigationModel.init(initialViewControllerType: ViewController1.self)
+navigationRouter.startNavigationModuleFrom(navigationModel)
+}
 }
 ```
 
@@ -198,19 +208,19 @@ ViewController1 must be inherited of NavigationModuleViewController and look lik
 
 ```
 class ViewController1: NavigationModuleViewController {
-    
-    var counter: Int?
-    
-    required init(navigationModule: NavigationModule? = nil, object: Any? = nil) {
-        super.init(navigationModule: navigationModule, object: object)
-        if let counter = (object as? Int) {
-            self.counter = counter
-        }
-    }
-    
-    required init(coder: NSCoder) {
-        fatalError("init(coder:) is not supported")
-    }
+
+var counter: Int?
+
+required init(navigationModule: NavigationModule? = nil, object: Any? = nil) {
+super.init(navigationModule: navigationModule, object: object)
+if let counter = (object as? Int) {
+self.counter = counter
+}
+}
+
+required init(coder: NSCoder) {
+fatalError("init(coder:) is not supported")
+}
 }
 ```
 
@@ -222,15 +232,15 @@ Storing the instances of NavigationModel in different places (SceneDelegate, Cus
 
 ```
 class NavigatinoModels {
-    // tab bar controller models
-    static let navigationSetModel1 = NavigationSetModel.init(title: "Title1", imageName: "image_name", initialViewControllerType: ViewController2.self)
-    static let navigationSetModel2 = NavigationSetModel.init(title: "Title2", imageName: "image_name", initialViewControllerType: ViewController2.self)
-    static let navigationSetModel3 = NavigationSetModel.init(title: "Title3", imageName: "image_name", initialViewControllerType: ViewController2.self)
-    
-    // navigation controller models
-    static let navigationModel1 = NavigationModel.init(initialViewControllerType: ViewController1.self)
-    static let navigationModel2 = NavigationModel.init(initialViewControllerType: ViewController1.self)
-    static let navigationModel3 = NavigationModel.init(initialViewControllerType: ViewController1.self)
+// tab bar controller models
+static let navigationSetModel1 = NavigationSetModel.init(title: "Title1", imageName: "image_name", initialViewControllerType: ViewController2.self)
+static let navigationSetModel2 = NavigationSetModel.init(title: "Title2", imageName: "image_name", initialViewControllerType: ViewController2.self)
+static let navigationSetModel3 = NavigationSetModel.init(title: "Title3", imageName: "image_name", initialViewControllerType: ViewController2.self)
+
+// navigation controller models
+static let navigationModel1 = NavigationModel.init(initialViewControllerType: ViewController1.self)
+static let navigationModel2 = NavigationModel.init(initialViewControllerType: ViewController1.self)
+static let navigationModel3 = NavigationModel.init(initialViewControllerType: ViewController1.self)
 }
 ```
 
