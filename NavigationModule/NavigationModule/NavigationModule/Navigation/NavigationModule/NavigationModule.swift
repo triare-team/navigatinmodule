@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class NavigationModule {
+open class NavigationModule {
     
     private(set) var navigationRouterModuleDelegate: NavigationRouterDelegate!
     
@@ -17,7 +17,7 @@ public class NavigationModule {
     
     private(set) var navigationModels: [NavigationModel]?
     
-    required init(navigationRouterModuleDelegate: NavigationRouterDelegate, navigationModels: [NavigationModel]?) {
+    public required init(navigationRouterModuleDelegate: NavigationRouterDelegate, navigationModels: [NavigationModel]?) {
         self.navigationRouterModuleDelegate = navigationRouterModuleDelegate
         self.navigationModels = navigationModels
     }
@@ -39,6 +39,7 @@ public class NavigationModule {
     }
     
     public func pushViewController<T : NavigationModuleViewController>(_ viewController: T.Type, object: Any?) {
+        
         let viewController = viewController.init(navigationModule: self, object: object)
         viewController.object = object
         navigationController.pushViewController(viewController, animated: true)
@@ -46,6 +47,18 @@ public class NavigationModule {
     
     public func popViewController() {
         navigationController.popViewController(animated: true)
+    }
+    
+    public func present(by navigationModel: NavigationModel?) {
+        guard let navigationModel = navigationModel else { return }
+        let navigationModule = NavigationModule.init(navigationRouterModuleDelegate: self.navigationRouterModuleDelegate, navigationModels: [navigationModel])
+        guard let presentedNavigationController = navigationModule.startFlow() else { return }
+        navigationController.present(presentedNavigationController, animated: true, completion: nil)
+    }
+    
+    public func dismiss() {
+        guard let presentingViewController = navigationController.presentingViewController else {return}
+        presentingViewController.dismiss(animated: true, completion: nil)
     }
 }
 

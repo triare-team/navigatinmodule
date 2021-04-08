@@ -31,8 +31,8 @@ class ViewController1: NavigationModuleViewController {
 
 
     @IBAction func next(_ sender: Any) {
-        
-        self.navigationModule?.endFlow(with: [NavigatinoModels.navigationSetModel1, NavigatinoModels,navigationSetModel2, NavigatinoModels.navigationSetModel3])
+        let navigationModel = NavigationModel.init(initialViewControllerType: ViewController2.self)
+        self.navigationModule?.present(by: navigationModel)
     }
 
 }

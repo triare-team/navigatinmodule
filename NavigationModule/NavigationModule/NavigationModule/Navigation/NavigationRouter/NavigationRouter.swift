@@ -37,7 +37,7 @@ public class NavigationRouter {
 
 extension NavigationRouter: NavigationRouterDelegate {
     
-    func startNextNavigationModule(with navigationModel: [NavigationModel]) {
+    public func startNextNavigationModule(with navigationModel: [NavigationModel]) {
         changeNavigationModule(with: navigationModel)
     }
 }
