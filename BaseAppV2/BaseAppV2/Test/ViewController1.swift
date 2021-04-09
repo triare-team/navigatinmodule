@@ -32,7 +32,7 @@ class ViewController1: NavigationModuleViewController {
 
     @IBAction func next(_ sender: Any) {
         let navigationModel = NavigationModel.init(initialViewControllerType: ViewController2.self)
-        self.navigationModule?.present(by: navigationModel)
+        self.navigationModule?.present(by: [navigationModel], with: "ALALALAAL", and: .overFullScreen)
     }
 
 }

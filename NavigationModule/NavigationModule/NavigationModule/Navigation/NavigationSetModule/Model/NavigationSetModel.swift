@@ -19,7 +19,7 @@ public class NavigationSetModel: NavigationModel {
         super.init(initialViewControllerType: initialViewControllerType)
     }
     
-    override func buildComponent(in navigationModule: NavigationModule) -> UINavigationController {
+    override func buildComponent(in navigationModule: NavigationModule, with object: Any?) -> UINavigationController {
         let tabBarItem = UITabBarItem.init(title: title, image: UIImage(named: imageName ?? ""), tag: 0)
         let navigationController = UINavigationController.init(rootViewController: initialViewControllerType.init(navigationModule: navigationModule))
         navigationController.tabBarItem = tabBarItem

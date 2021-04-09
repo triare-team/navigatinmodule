@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class TabBarNavigationModule: NavigationModule {
-    override func builder(for navigationModels: [NavigationModel]) -> UINavigationController {
+    override func builder(for navigationModels: [NavigationModel], with object: Any?) -> UINavigationController {
         let tabBarController = NavigationSetController.init()
         
         navigationModels.forEach { (navigationModel) in

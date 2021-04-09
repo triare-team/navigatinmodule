@@ -22,14 +22,14 @@ open class NavigationModule {
         self.navigationModels = navigationModels
     }
     
-    func startFlow() -> UINavigationController? {
+    func startFlow(_ object: Any? = nil) -> UINavigationController? {
         guard let navigationModels = navigationModels else { return nil }
-        return builder(for: navigationModels)
+        return builder(for: navigationModels, with: object)
     }
     
-    func builder(for navigationModels: [NavigationModel]) -> UINavigationController {
+    func builder(for navigationModels: [NavigationModel], with object: Any?) -> UINavigationController {
         if let navigationModel = navigationModels.first {
-            navigationController = navigationModel.buildComponent(in: self)
+            navigationController = navigationModel.buildComponent(in: self, with: object)
         }
         return navigationController
     }
@@ -49,10 +49,11 @@ open class NavigationModule {
         navigationController.popViewController(animated: true)
     }
     
-    public func present(by navigationModel: NavigationModel?) {
-        guard let navigationModel = navigationModel else { return }
-        let navigationModule = NavigationModule.init(navigationRouterModuleDelegate: self.navigationRouterModuleDelegate, navigationModels: [navigationModel])
-        guard let presentedNavigationController = navigationModule.startFlow() else { return }
+    public func present(by navigationModels: [NavigationModel]?, with object: Any?, and presentationStyle: UIModalPresentationStyle) {
+        guard let navigationModels = navigationModels else { return }
+        let navigationModule = NavigationModule.init(navigationRouterModuleDelegate: self.navigationRouterModuleDelegate, navigationModels: navigationModels)
+        guard let presentedNavigationController = navigationModule.startFlow(object) else { return }
+        presentedNavigationController.modalPresentationStyle = presentationStyle
         navigationController.present(presentedNavigationController, animated: true, completion: nil)
     }
     

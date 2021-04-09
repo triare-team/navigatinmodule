@@ -15,7 +15,7 @@ public class NavigationModel {
         self.initialViewControllerType = initialViewControllerType
     }
     
-    func buildComponent(in navigationModule: NavigationModule) -> UINavigationController {
-        return UINavigationController.init(rootViewController: initialViewControllerType.init(navigationModule: navigationModule))
+    func buildComponent(in navigationModule: NavigationModule, with object: Any?) -> UINavigationController {
+        return UINavigationController.init(rootViewController: initialViewControllerType.init(navigationModule: navigationModule, object: object))
     }
 }
