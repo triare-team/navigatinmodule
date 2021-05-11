@@ -17,6 +17,11 @@ open class NavigationModuleViewController: UIViewController {
         print("NavigationModuleViewController deinited")
     }
     
+    public init(navigationModule: NavigationModule? = nil, object: Any? = nil, bundle: Bundle?) {
+        self.navigationModule = navigationModule
+        super.init(nibName: String(describing: type(of: self)), bundle: bundle)
+    }
+    
     required public init(navigationModule: NavigationModule? = nil, object: Any? = nil) {
         self.navigationModule = navigationModule
         super.init(nibName: String(describing: type(of: self)), bundle: nil)
