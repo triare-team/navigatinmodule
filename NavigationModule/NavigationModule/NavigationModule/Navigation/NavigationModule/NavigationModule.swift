@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Hero
 
 open class NavigationModule {
     
@@ -49,10 +50,11 @@ open class NavigationModule {
         navigationController.popViewController(animated: true)
     }
     
-    public func present(by navigationModels: [NavigationModel]?, with object: Any?, and presentationStyle: UIModalPresentationStyle) {
+    public func present(by navigationModels: [NavigationModel]?, with object: Any?, and presentationStyle: UIModalPresentationStyle, withHero: Bool = false) {
         guard let navigationModels = navigationModels else { return }
         let navigationModule = NavigationModule.init(navigationRouterModuleDelegate: self.navigationRouterModuleDelegate, navigationModels: navigationModels)
         guard let presentedNavigationController = navigationModule.startFlow(object) else { return }
+        presentedNavigationController.hero.isEnabled = withHero
         presentedNavigationController.modalPresentationStyle = presentationStyle
         navigationController.present(presentedNavigationController, animated: true, completion: nil)
     }

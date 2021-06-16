@@ -9,10 +9,12 @@ let package = Package(
     products: [
         .library(name: "NavigationModule",targets: ["NavigationModule"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/HeroTransitions/Hero.git", .upToNextMajor(from: "1.4.0")),
+    ],
     targets: [
         .target(name: "NavigationModule",
-                dependencies: [],
+                dependencies: ["Hero"],
                 path: "NavigationModule",
                 exclude: ["NavigationModule/Info.plist", "NavigationModuleTests"]),
         .testTarget(name: "NavigationModuleTests",
