@@ -14,7 +14,7 @@ open class NavigationModuleViewController: UIViewController {
     public var navigationModule: NavigationModule?
     
     deinit {
-        print("NavigationModuleViewController deinited")
+        print("NavigationModuleViewController \(type(of: self)) deinited")
     }
     
     public init(navigationModule: NavigationModule? = nil, object: Any? = nil, bundle: Bundle?) {

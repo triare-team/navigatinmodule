@@ -56,7 +56,9 @@ open class NavigationModule {
         guard let presentedNavigationController = navigationModule.startFlow(object) else { return }
         presentedNavigationController.hero.isEnabled = withHero
         presentedNavigationController.modalPresentationStyle = presentationStyle
-        navigationController.present(presentedNavigationController, animated: true, completion: nil)
+        navigationController.present(presentedNavigationController, animated: true, completion: {
+            presentedNavigationController.hero.isEnabled = false
+        })
     }
     
     public func dismiss() {
