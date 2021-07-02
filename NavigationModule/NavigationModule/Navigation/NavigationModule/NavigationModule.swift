@@ -3,7 +3,7 @@
 //  AuthModule
 //
 //  Created by Alexander on 14.05.2020.
-//  Copyright ©  2020 Nutrihorse. All rights reserved.
+//  Copyright © 2020 Nutrihorse. All rights reserved.
 //
 
 import Foundation
@@ -39,7 +39,7 @@ open class NavigationModule {
         navigationRouterModuleDelegate.startNextNavigationModule(with: nextNavigationModel)
     }
     
-    public func pushViewController<T : NavigationModuleViewController>(_ viewController: T.Type, object: Any?) {
+    public func pushViewController<T: NavigationModuleViewController>(_ viewController: T.Type, object: Any?) {
         
         let viewController = viewController.init(navigationModule: self, object: object)
         viewController.object = object

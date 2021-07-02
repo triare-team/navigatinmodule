@@ -19,12 +19,13 @@ open class NavigationModuleViewController: UIViewController {
     
     public init(navigationModule: NavigationModule? = nil, object: Any? = nil, bundle: Bundle?) {
         self.navigationModule = navigationModule
+        let bundle = bundle != nil ? bundle : Bundle(for: Self.self)
         super.init(nibName: String(describing: type(of: self)), bundle: bundle)
     }
     
     required public init(navigationModule: NavigationModule? = nil, object: Any? = nil) {
         self.navigationModule = navigationModule
-        super.init(nibName: String(describing: type(of: self)), bundle: nil)
+        super.init(nibName: String(describing: type(of: self)), bundle: Bundle(for: Self.self))
     }
     
     required public init(coder aDecoder: NSCoder) {
