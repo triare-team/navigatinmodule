@@ -14,7 +14,7 @@
 - File
 - Swift Packages
 - Add Package Dependency...
-- Enter repository URL: ```http://gitlab.triare.net/Kruglyak/navigationmodule.git```
+- Enter repository URL: ```http://https://github.com/triare-team/navigatinmodule.git```
 - Rules - Version Up to Next Major 1.0.2
 - Press Next button
 - Finish
